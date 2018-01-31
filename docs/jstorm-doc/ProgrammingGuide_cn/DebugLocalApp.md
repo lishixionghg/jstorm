@@ -39,7 +39,7 @@ JStorm 提供了两种运行模式：本地模式和分布式模式。本地模�
 	
 	cluster.shutdown();
 	```
-	用LocalCluster来模拟集群环境，你可以在`LocalCluster`对象上调用`submitTopology`方法来提交拓扑，`submitTopology(String topologyName, Map conf, StormTopology topology)`接受一个拓扑名称，一个拓扑的配置，以及一个拓扑的对象。就像`StormSubmitter`一样。你还可以调用`killTopology`来结束一个拓扑。对应的还有`active`,`deactive`,`rebalance`等方法。由于JStorm是个不会停止的程序，所以我们最后需要显示地停掉集群。
+	用LocalCluster来模拟集群环境，你可以在`LocalCluster`对象上调用`submitTopology`方法来提交拓扑，`submitTopology(String topologyName, Map conf, StormTopology topology)`接受一个拓扑名称，一个拓扑的配置，以及一个拓扑的对象。就像`StormSubmitter`一样。你还可以调用`killTopology`来结束一个拓扑。对应的还有`active`,`deactive`,`rebalance`等方法。由于JStorm是个不会停止的程序，所以我们最后需要显式地停掉集群。
 
 ## 修改pom.xml
 
